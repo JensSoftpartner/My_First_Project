@@ -1,0 +1,28 @@
+{
+  "id": "2f1f7409-c5ab-4119-bef2-97988f7d63ab",
+  "name": "ALPrject_MyFirst_Project",
+  "publisher": "Default publisher",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "13.0.0.0",
+  "application": "13.0.0.0",
+  "idRange": {
+    "from": 50100,
+    "to": 50149
+  },
+  "runtime": "2.1",
+  "features": ["TranslationFile"],
+  "target": "Internal",
+  "showMyCode": true
+
+
+}
