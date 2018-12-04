@@ -7,7 +7,8 @@ table 50104 "CSD Seminar Comment Line"
         field(10; "Table Name"; Option)
         {
             Caption = 'Tabel navn';
-            OptionMembers = "Seminar;Seminar Registration;Posted Seminar Registration";
+            OptionMembers = "Seminar","Seminar Registration","Posted Seminar Registration";
+            OptionCaption = 'Seminar,Seminar Registration,Posted Seminar Registration';
         }
         field(20; "Document Line No."; Integer)
         {
@@ -16,8 +17,10 @@ table 50104 "CSD Seminar Comment Line"
         }
         field(30; "No."; Code[20])
         {
-            Caption = 'Tabel navn';
-
+            Caption = 'Number';
+            TableRelation = if ("Table name" = CONST (Seminar)) "CSD Seminar"
+            else
+            if ("Table Name" = CONST ("Seminar Registration")) "CSD Seminar Reg. Header";
         }
         field(40; "Line No."; Integer)
         {
