@@ -74,7 +74,7 @@ table 50110 "CSD Seminar Reg. Header"
         }
         field(6; "Instructor Name"; Text[50])
         {
-            CalcFormula = Lookup (Resource.Name where ("No."=Field("Instructor Code"),
+            CalcFormula = Lookup (Resource.Name where (No.=Field(Instructor Code),
                                                       Type=const(Person)));
             Editable = false;
             FieldClass = FlowField;
@@ -205,8 +205,8 @@ table 50110 "CSD Seminar Reg. Header"
         }
         field(22;Comment;Boolean)
         {
-            CalcFormula = Exist("CSD Seminar Comment Line" where ("Table Name"=const("Seminar Registration"),
-                                                              "No."=Field("No.")));
+            CalcFormula = Exist("CSD Seminar Comment Line" where (Table Name=const(Seminar Registration Header),
+                                                              No.=Field(No.)));
             Editable = false;
             FieldClass = FlowField;
         }
